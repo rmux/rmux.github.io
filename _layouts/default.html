@@ -1,5 +1,30 @@
-<select id="skin-switcher">
-  <option value="default">Default</option>
-  <option value="dark">Dark</option>
-  <option value="light">Light</option>
-</select>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Other head content -->
+  <link rel="stylesheet" id="theme-stylesheet" href="/assets/css/style.scss">
+</head>
+
+<body>
+  <!-- Site content -->
+
+  <!-- Skin Switcher Dropdown -->
+  <select id="skin-switcher" style="position: fixed; right: 20px; top: 20px; z-index: 1000;">
+    <option value="default">Default Skin</option>
+    <option value="dark">Dark Skin</option>
+    <option value="light">Light Skin</option>
+  </select>
+
+  <!-- JavaScript for Skin Switching -->
+  <script>
+  document.getElementById('skin-switcher').addEventListener('change', function() {
+    var selectedSkin = this.value;
+    document.getElementById('theme-stylesheet').setAttribute('href', '/assets/css/' + selectedSkin + '.css');
+  });
+  </script>
+
+  <!-- Other scripts and closing body tag -->
+</body>
+
+</html>
