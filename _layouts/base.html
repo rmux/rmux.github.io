@@ -1,30 +1,20 @@
-<!--<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-<head>
-  <!-- Other head content -->
-  <link rel="stylesheet" id="theme-stylesheet" href="/assets/css/style.scss">
-</head>
+  {%- include head.html -%}
 
-<body>
-  <!-- Site content -->
+  <body>
 
-  <!-- Skin Switcher Dropdown -->
-  <select id="skin-switcher" style="position: fixed; right: 20px; top: 20px; z-index: 1000;">
-    <option value="default">Default Skin</option>
-    <option value="dark">Dark Skin</option>
-    <option value="light">Light Skin</option>
-  </select>
+    {%- include header.html -%}
 
-  <!-- JavaScript for Skin Switching -->
-  <script>
-  document.getElementById('skin-switcher').addEventListener('change', function() {
-    var selectedSkin = this.value;
-    document.getElementById('theme-stylesheet').setAttribute('href', '/assets/css/' + selectedSkin + '.css');
-  });
-  </script>
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
 
-  <!-- Other scripts and closing body tag -->
-</body>
+    {%- include footer.html -%}
 
-</html>-->
+  </body>
+
+</html>
