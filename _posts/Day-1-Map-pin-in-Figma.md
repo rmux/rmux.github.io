@@ -1,7 +1,5 @@
 ---
 layout: post
-title: "Day 1: Steps to draw a map pin"
-categories: visual design, Figma
 ---
 
 1. Draw a circle (circle 1) on the artboard using Ellipse from Shapes while pressing the Shift key.
